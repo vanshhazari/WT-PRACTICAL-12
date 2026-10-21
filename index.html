@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Marwadi University - Bootstrap Scrollspy</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: linear-gradient(135deg, #e0f7fa, #f3e5f5);
+        }
+    
+        section {
+            padding: 70px 0;
+            scroll-margin-top: 70px;
+        }
+    
+        /* Navbar */
+        .navbar {
+            background: linear-gradient(90deg, #05386b, #379683) !important;
+        }
+    
+        .navbar-brand,
+        .nav-link {
+            color: white !important;
+        }
+    
+        .nav-link:hover {
+            color: #d5f5e3 !important;
+        }
+    
+        /* Home */
+        .hero {
+            min-height: 500px;
+            padding-top: 130px;
+            background: linear-gradient(135deg, #05386b, #379683, #5cdb95);
+        }
+    
+        /* Sections */
+        .content-section {
+            padding: 70px 0;
+            background: linear-gradient(135deg, #59CDE9, #0A2A88);
+        }
+    
+        /* Cards */
+        .card-custom {
+            border: none;
+            border-radius: 15px;
+            background: linear-gradient(135deg, #ffffff, #e8f5e9);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+            transition: 0.3s;
+        }
+    
+        .card-custom:hover {
+            transform: translateY(-5px);
+        }
+    
+        .section-title {
+            color: #05386b;
+            font-weight: bold;
+        }
+    
+        /* Gallery */
+        .gallery-img {
+            width: 220px;
+            height: 150px;
+            object-fit: cover;
+            margin: 10px;
+            border: 3px solid #05386b;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+    
+        .gallery-img:hover {
+            transform: scale(1.05);
+        }
+    
+        /* Recruiters */
+        .recruiter {
+            background: linear-gradient(135deg, #05386b, #379683);
+            color: white;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 10px;
+            width: 130px;
+            text-align: center;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+    
+        .recruiter:hover {
+            transform: translateY(-5px);
+        }
+    
+        /* Table */
+        .table thead th {
+            background: linear-gradient(90deg, #05386b, #379683);
+            color: white;
+        }
+    
+        /* Footer */
+        footer {
+            background: linear-gradient(90deg, #05386b, #379683);
+            color: white;
+        }
+    </style>
+    
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="70">
+    <nav id="navbar" class="navbar navbar-expand-lg bg-light navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#home">
+                <img src="images/MU_LOGO_WHITE.png" alt="logo" style="height: 80px; width: 300px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#vision">Vision</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#mission">Mission</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#outcomes">Outcomes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#courses">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#recruiters">Recruiters</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero text-white text-center d-flex align-items-center">
+        <div class="container">
+            <h1 class="display-3 fw-bold">MARWADI UNIVERSITY</h1>
+            <p class="lead fs-3">Knowledge - Innovation - Excellence</p>
+            <p class="mt-3">Welcome to Marwadi University</p>
+            <a href="#vision" class="btn btn-light btn-lg mt-3">Explore University</a>
+        </div>
+    </section>
+
+    <section id="vision" class="content-section bg-light">
+        <div class="container">
+            <div class="card card-custom p-4">
+                <h2 class="section-title">Vision</h2>
+                <p class="lead">
+                    To become a leading institution by providing quality education,
+                    innovation, research, and ethical values.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="mission" class="content-section">
+        <div class="container">
+            <div class="card card-custom p-4">
+                <h2 class="section-title">Mission</h2>
+                <ul class="fs-5">
+                    <li class="mb-2">Provide quality technical education.</li>
+                    <li class="mb-2">Develop innovative and skilled professionals.</li>
+                    <li class="mb-2">Encourage research and entrepreneurship.</li>
+                    <li>Promote ethics and social responsibility.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="outcomes" class="content-section bg-light">
+        <div class="container">
+            <div class="card card-custom p-4">
+                <h2 class="section-title">Program Specific Outcomes</h2>
+                <ol class="fs-5">
+                    <li class="mb-2">Apply engineering knowledge to solve practical problems.</li>
+                    <li class="mb-2">Design software and technical solutions.</li>
+                    <li>Work effectively in teams with professional ethics.</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <section id="courses" class="content-section">
+        <div class="container">
+            <div class="card card-custom p-4">
+                <h2 class="section-title">Courses Offered</h2>
+
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover text-center align-middle">
+                        <thead>
+                            <tr>
+                                <th>Course</th>
+                                <th>Duration</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>B.Tech Computer Engineering</td>
+                                <td>4 Years</td>
+                            </tr>
+                            <tr>
+                                <td>B.Tech Information Technology</td>
+                                <td>4 Years</td>
+                            </tr>
+                            <tr>
+                                <td>B.Tech Civil Engineering</td>
+                                <td>4 Years</td>
+                            </tr>
+                            <tr>
+                                <td>B.Tech Mechanical Engineering</td>
+                                <td>4 Years</td>
+                            </tr>
+                            <tr>
+                                <td>MBA</td>
+                                <td>2 Years</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="content-section bg-light">
+        <div class="container">
+            <div class="card card-custom p-4">
+                <h2 class="section-title">Image Gallery of Events</h2>
+
+                <div class="d-flex justify-content-center flex-wrap">
+                    <img src="images/mu-fest.jpg" alt="MU FEST" class="gallery-img">
+                    <img src="images/cultural-festival.jpg" alt="CULTURAL FEST" class="gallery-img">
+                    <img src="images/student-club.jpg" alt="STUDENT CLUBS" class="gallery-img">
+                    <img src="images/advance-lab.jpg" alt="ADVANCE LABS" class="gallery-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="recruiters" class="content-section">
+        <div class="container">
+            <div class="card card-custom p-4">
+                <h2 class="section-title">Top Recruiters</h2>
+                <div class="d-flex justify-content-center flex-wrap">
+                    <div class="recruiter">TCS</div>
+                    <div class="recruiter">Infosys</div>
+                    <div class="recruiter">Wipro</div>
+                    <div class="recruiter">Accenture</div>
+                    <div class="recruiter">Google</div>
+                    <div class="recruiter">Apple</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center py-4">
+        <p class="mb-0">&copy; 2026 MARWADI UNIVERSITY. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
